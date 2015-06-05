@@ -1,0 +1,7 @@
+name 'nginx-ruby_backend'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures nginx-ruby_backend'
+long_description 'Installs/Configures nginx-ruby_backend'
+version '0.1.0'
