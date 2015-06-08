@@ -11,7 +11,7 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[nginx_ruby_backend]
+      - recipe[nginx_application]
     attributes:
       nginx_application:
         applications:

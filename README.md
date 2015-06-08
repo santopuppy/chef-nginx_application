@@ -28,12 +28,12 @@ Attributes
     name: 'test_app',                                             # Used for the upstram name
     upstream_servers: [ { address: '10.0.1.197', port: 3000 } ],  # The upstream information
     server_name: 'testsite.com',                                  # Used for the server_name directive
-    ssl: true,                                                    # If set to true, ssl directives are added to the virtual host file
+    ssl: true,                                                    # Enable ssl
     ssl_certificate: "/etc/nginx/ssl/ssl-bundle.crt",             # Path to the ssl certificate.
     ssl_certificate_key: "/etc/nginx/ssl/testsite.key",           # Path to the ssl key
     ssl_stapling: true,                                           # Enables OCSP stapling
-    application_root: "/path/to/application/root/public",         # If present, sets the nginx root directive
-    x_frame_options: "DENY"                                       # If present, sets X-Frame-Options
+    application_root: "/path/to/application/root/public",         # Sets the nginx root directive
+    x_frame_options: "DENY"                                       # Sets X-Frame-Options
   }
 }
 ```
