@@ -9,8 +9,6 @@ node.set['apt']['unattended_upgrades']['allowed_origins'] = ["${distro_id} ${dis
 default['nginx']['dhparam_dir'] = '/etc/ssl/certs'
 default['nginx']['dhparam_pem'] = 'dhparam.pem'
 
-dhparam_path = "#{node['nginx']['dhparam_dir']}/#{node['nginx']['dhparam_pem']}"
-
 node.set['nginx']['extra_configs'] =  {
                                         "ssl_ciphers" => '"EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH"',
                                         "ssl_protocols" => "TLSv1 TLSv1.1 TLSv1.2",
@@ -19,4 +17,4 @@ node.set['nginx']['extra_configs'] =  {
                                         "ssl_dhparam" => dhparam_path 
                                       }
 
-default['nginx_application']['applicatiions'] = []
+default['nginx_application']['applications'] = []
