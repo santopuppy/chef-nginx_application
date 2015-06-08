@@ -19,4 +19,4 @@ node.set['nginx']['extra_configs'] =  {
                                         "ssl_dhparam" => dhparam_path 
                                       }
 
-default['nginx']['applicatiions'] = []
+default['nginx_application']['applicatiions'] = []
