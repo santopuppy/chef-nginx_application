@@ -13,7 +13,7 @@ suites:
     run_list:
       - recipe[nginx_ruby_backend]
     attributes:
-      nginx_ruby_backend:
+      nginx_application:
         applications:
           - site_name: 'testsite.com'
             configuration:
