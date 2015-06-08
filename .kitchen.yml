@@ -11,5 +11,18 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[nginx-ruby_backend]
+      - recipe[nginx_ruby_backend]
     attributes:
+      nginx_ruby_backend:
+        applications:
+          - site_name: 'testsite.com'
+            configuration:
+              name: 'test_app'
+              upstream_servers: [ { address: '10.0.1.197', port: 3000 } ]
+              server_name: 'testsite.com'
+              ssl: true
+              ssl_certificate: "/etc/nginx/ssl/ssl-bundle.crt"
+              ssl_certificate_key: "/etc/nginx/ssl/testsite.key"
+              ssl_stapling: true
+              application_root: "/path/to/application/root/public"
+              x_frame_options: "DENY"
