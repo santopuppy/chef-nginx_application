@@ -1,6 +1,5 @@
 require 'json'
 require 'ostruct'
-require 'pry'
 
 include_recipe 'apt'
 include_recipe 'apt::unattended-upgrades'
